@@ -1,14 +1,19 @@
-import ReactDOM from 'react-dom';
 import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
-class App extends React.Component {
-  render() {
-    return (
-      <h1>Hello, World!</h1>
-    );
-  }
-}
+import store from './store';
+
+import App from './components/App';
+import Home from './components/Home';
 
 ReactDOM.render((
-  <App />
-), document.getElementById('root'));
+  <Provider store={ store }>
+    <Router history={hashHistory}>
+      <Route path="/" component={App}>
+        <IndexRoute component={Home} />
+      </Route>
+    </Router>
+  </Provider>
+), document.getElementById('realworld-app'));
