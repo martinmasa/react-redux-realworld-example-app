@@ -19,4 +19,4 @@ ReactDOM.render((
       </Route>
     </Router>
   </Provider>
-), document.getElementById('realworld-app'));
+), document.getElementById('main'));

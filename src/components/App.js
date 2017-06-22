@@ -40,7 +40,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Header appName={this.props.appName} />
+        <Header appName={this.props.appName} currentUser={this.props.currentUser} />
         {this.props.children}
       </div>
     );
