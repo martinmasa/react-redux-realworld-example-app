@@ -1,16 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-
-const navItemStyle = 'float: left;'
-
 const LoggedInView = (props) => {
   if (props.currentUser) {
     return (
       <ul className="nav navbar-nav pull-xs-right">
 
         <li className="nav-item">
-          <Link to="" className="nav-link">
+          <Link to="/" className="nav-link">
             Home
           </Link>
         </li>
