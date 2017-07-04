@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const ArticlePreviw = (props) => {
   const article = props.article;
@@ -26,7 +27,7 @@ const ArticlePreviw = (props) => {
         </div>
       </div>
 
-      <a to={`article/${article.slug}`} className="previewLink">
+      <Link to={`article/${article.slug}`} className="preview-link">
         <h1>{article.title}</h1>
         <p>{article.description}</p>
         <span>Read more...</span>
@@ -41,7 +42,7 @@ const ArticlePreviw = (props) => {
             })
           }
         </ul>
-      </a>
+      </Link>
     </div>
   );
 };
